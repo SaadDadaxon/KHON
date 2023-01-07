@@ -1,0 +1,44 @@
+{% load static %}
+
+<div>
+    <ul class="nav_link">
+        <li>
+            <a href="{% url 'article:list' %}">
+            <img src="{% static 'image/img_1.png' %}" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'article:list' %}">Article</a>
+        </li>
+        <li>
+            <a href="{% url 'blog:list' %}">Blogs</a>
+        </li>
+<!--        <li>-->
+<!--            <a href="{% url 'recipes:list' %}">Recipes</a>-->
+<!--            <ul>-->
+<!--                <li><a href="#">Recipe</a></li>-->
+<!--                <li><a href="#">Tag</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+        <div class="dropdown">
+         <a href="#" class="drop">Recipes</a>
+         <div class="dropdown-content">
+             <a href="{% url 'recipes:list' %}">Recipe</a>
+             <a href="{% url 'recipes:tag_list' %}">Tags </a>
+         </div>
+        </div>
+    </ul>
+</div>
+<div>
+    {% if request.user.is_authenticated %}
+    {{request.user}}
+    <span>
+        <a href="{% url 'account:logout' %}">Logout</a>
+    </span>
+    {% else %}
+    <span>
+<!--        {{request.user}}-->
+        <a href="{% url 'account:login' %}">Login</a>
+    </span>
+    {% endif %}
+</div>

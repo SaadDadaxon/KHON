@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{object.title}}{% endblock %}
+
+
+{% block content %}
+
+<h1>{{object.title}}</h1>
+{% if object.image %}
+<div>
+    <img class="rasm" src="{{ object.image.url }}" alt="">
+</div>
+{% endif %}
+<p>{{object.content}}</p>
+
+<div>
+ <code>
+     {{object.created_date}}
+ </code>
+
+</div>
+    <span>last edit: <i>{{object.modified_date}}</i></span>
+ <div>
+<!--        <button type="submit" class="btn">Edit</button>-->
+     <a href="{% url 'article:edit' object.slug %}" class="btn">Edit</a>
+
+ </div>
+
+{% endblock %}

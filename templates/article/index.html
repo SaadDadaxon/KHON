@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block title %} Article {% endblock %}
+
+{% block content %}
+<!--<div>-->
+<!--    <a href="{% url 'article:new_index' %}"><button type="submit" style="color: green" class="btn">New Edit</button></a>-->
+<!--</div>-->
+<div>
+<form action="{% url 'article:list' %}">
+    <input class="search" type="search" name="q" placeholder="search...">
+    <input style="color: green" type="submit" value="search">
+</form>
+</div>
+<div>
+    <ol class="article_list">
+        {% for object in object_list %}
+        <li>
+            <a href="{% url 'article:detail' object.slug%}"><button type="submit" style="color: green">{{object.title}}({{object.id}})</button></a>
+            <a href="{% url 'article:edit' object.slug%}"><button type="submit" style="color: blue">Edit</button></a>
+            <a href="{% url 'article:delete' object.slug%}"><button type="submit" style="color: red">Delete</button></a>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+<div>
+    <a href="{% url 'article:create' %}"><button type="submit" style="color: green" class="btn">add new article</button></a>
+    <br>
+</div>
+<!--<div>-->
+<!--    <br>-->
+<!--    <a href="{% url 'article:newcreate' %}"><button type="submit" style="color: green" class="btn">New Create</button></a>-->
+<!--</div>-->
+
+{% endblock %}

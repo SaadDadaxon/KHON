@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Recipe Create {% endblock %}
+
+{% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            Rostan ham siz {{object.title}}ni o'chirmoqchimisz
+        </div>
+        <a href="{% url 'recipes:tag_detail' object.id %}" class="btn" style="color: green">YOQ</a>
+        <button type="submit" class="btn" style="color: red">HA</button>
+    </form>
+</div>
+
+
+{% endblock %}

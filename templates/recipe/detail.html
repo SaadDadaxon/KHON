@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %} Recipe Detail {% endblock %}
+
+{% block content %}
+<div>
+    <a class="btn" href="{% url 'recipes:list' %}" style="color: #000000">back to Recipe list</a>
+    <a class="btn" href="{% url 'recipes:ing_create' object.slug %}" style="color: #000000">Add Ingredient</a>
+</div>
+  <div class="rec_list">
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.author }}</p>
+    <div>
+      {% for tag in object.tags.all %}
+      <button class="tags">{{tag.title }}</button>
+      {% endfor %}
+    </div>
+    <a class="btn" href="{% url 'recipes:update' object.slug %}" style="color: #000000">Edit</a>
+    <a class="btn" href="{% url 'recipes:delete' object.slug %}" style=" color: red">Delete</a>
+    <div class="ingredient_ram">
+      {{object.created_date}}
+    </div>
+  </div>
+<div>
+  {% for ingredient in object.ingredients.all %}
+
+  <div class="rec_lists">
+    <h2>{{ingredient.title }}</h2>
+    <p>{{ingredient.quantity}} - {{ingredient.get_unit_display.lower}}</p>
+    <a class="btn" href="{% url 'recipes:ing_update' ingredient.recipe.slug ingredient.id %}" style="color: #000000">Edit</a>
+    <a class="btn" href="{% url 'recipes:ing_delete' ingredient.recipe.slug ingredient.id %}" style="color: red">Delete</a>
+    <div class="ingredient_ram">
+      {{ingredient.created_date}}
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+
+
+{% endblock %}

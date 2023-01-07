@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Tag  Create {% endblock %}
+
+{% block content %}
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <a href="{% url 'recipes:tag_list' %}">back to tags list</a>
+</div>
+    <div class="rec_title">
+    <label for="id_title">Title</label>
+    {{form.title}}
+    </div>
+    <div class="rec_title">
+    <label for="is_active">Quantity</label>
+    {{form.quantity}}
+    </div>
+    <div class="rec_title">
+    <label for="id_tags">Unit</label>
+    {{form.unit}}
+    </div>
+  <button type="submit" class="btn" style="color: green">Submit</button>
+</form>
+
+{% endblock %}

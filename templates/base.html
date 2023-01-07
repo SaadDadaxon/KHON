@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Try Django {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+{% include "nav.html" %}
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+<hr>
+<body>
+
+{% block content %}
+
+
+{% endblock %}
+
+</body>
+<hr>
+{% include "footer.html" %}
+
+</html>

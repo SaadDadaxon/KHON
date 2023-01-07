@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Article {% endblock %}
+
+{% block content %}
+
+<div>
+  <ol>
+    {% for object in object_list %}
+    <li>
+      <a href="{% url 'article:detail' object.slug%}" class="btn">{{object.title}}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+{% endblock %}

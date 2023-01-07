@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <div class="reg">
+    <label for="username">Username</label>
+    {{form.username}}
+    </div>
+    <div class="reg">
+    <label for="password1">Password</label>
+    {{form.password1}}
+    </div>
+    <div class="reg">
+    <label for="password2">Veryfi Password</label>
+    {{form.password2}}
+    </div>
+
+
+    <button type="submit">Add</button>
+</form>
+<p>
+    Agar Ro'yxatdan o'tgan bo'lsangiz <a href="{% url 'account:login' %}">Kirish</a> Tugmasini bosing
+</p>
+
+{% endblock %}

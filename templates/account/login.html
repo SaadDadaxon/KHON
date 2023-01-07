@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+<!--    <div>-->
+<!--        <label for="username">Username</label>-->
+<!--        <input class="search" type="text" required name="username" id="username" placeholder="username...">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label for="password">Password:</label>-->
+<!--        <input class="search" type="password" required name="password" id="password" placeholder="password">-->
+<!--    </div>-->
+    {{form.as_p}}
+    <button class="btn" type="submit">Login</button>
+</form>
+
+<p class="royxat">
+    Agar Ro'yxatdan o'tmagan Bo'lsangiz<a href="{% url 'account:register' %}">Ro'yxatdan O'tish</a> tugmasini bosing
+</p>
+
+{% endblock %}

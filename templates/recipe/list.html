@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} Recipe List {% endblock %}
+
+{% block content %}
+<div>
+    <a href="{% url 'recipes:create' %}">Add New Recipe</a>
+        <form action="{% url 'recipes:list' %}">
+         <input class="search" type="search" name="q" placeholder="search..." autocomplete="off">
+         <input style="color: green" type="submit" value="search" >
+        </form>
+</div>
+<ol>
+        {% for object in object_list %}
+            <li class="recipe_list">
+               <div>
+                   <a href="{% url 'recipes:detail' object.slug %}">{{object.title}}</a>
+               </div>
+                  {{object.author}}
+                  <span>{{object.ingredients.count}}</span>
+            </li>
+        {% endfor %}
+</ol>
+
+
+{% endblock %}
+

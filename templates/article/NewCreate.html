@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}New Create{% endblock %}
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<!--    <div>-->
+<!--        <label for="title">Title</label>-->
+<!--        <br>-->
+<!--        <input type="text" id="title" placeholder="title" name="title">-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--        <label for="content">Content</label>-->
+<!--        <br>-->
+<!--        <textarea name="content" id="content" cols="50" rows="4" placeholder="content"></textarea>-->
+<!--    </div>-->
+
+            {{form.as_p}}
+        <div style="margin-top: 20px">
+            <input type='submit' value="Add NEW NEW" class="btn">
+        </div>
+
+</form>
+
+{% endblock %}
+

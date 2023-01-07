@@ -1,0 +1,178 @@
+.article_list li, .btn {
+    padding 15px 0;
+}
+body {
+background-color: white !important;
+}
+.nav_link li, .btn{
+    display: inline-block;
+    margin-left: 15px;
+}
+.nav_link img {
+    width: 250px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.form button, form input[type=submit], li button[type=submit], .btn{
+    padding: 7px 30px;
+    font-family: Arial;
+    color: #fff;
+    border: 0.1;
+    border-color: black;
+    margin-top: 20px;
+    border-radius: 10px !important;
+    font-size: 15px;
+    font-wight: bolder;
+    cursor: pointer;
+    background-color: white;
+}
+form button:hover, form input[type=submit]:hover, li button[type=submit]:hover, .btn:hover{
+    background-color: cornflowerblue;
+    transition: .5s;
+}
+
+.search {
+    padding: 10px 5px;
+    width: 250px;
+    border: 1;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+.add {
+margin-left: 10px;
+}
+.rasm {
+    width: 270px;
+}
+.royxat {
+margin-top: 10px;
+}
+.rec_title {
+margin-top:10px;
+}
+.del {
+border: 0;
+}
+.recipe_list {
+border-style: groove;
+border-radius: 10px;
+background-color: white;
+margin: auto;
+  width: 40%;
+  border: 1px solid #73AD21;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+.rec_list {
+border-style: groove;
+border-radius: 10px;
+background-color: DarkSeaGreen;
+margin: auto;
+  width: 40%;
+  border: 1px solid #73AD21;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+.rec_lists {
+border-style: groove;
+border-radius: 10px;
+background-color: white;
+margin: auto;
+  width: 40%;
+  border: 1px solid #73AD21;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+      display: inline-block;
+}
+.ingredient_ram {
+width: 150px;
+height: 20px;
+border-radius: 8px;
+border-style: groove;
+border-color: tan;
+border: 0;
+background-color: Cornsilk;
+margin-top: 10px;
+}
+.tags {
+    padding: 7px 30px;
+    font-family: Arial;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+    border-radius: 10px !important;
+    font-size: 15px;
+    font-wight: bolder;
+    cursor: pointer;
+    background-color: Black;
+}
+.btn {
+background-color: white;
+}
+
+
+
+
+<style>
+/* Style The Dropdown Button */
+.drop {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.drop {
+margin-left: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .drop {
+  background-color: white;
+}
+</style>
+
+
+
+
+
+
+

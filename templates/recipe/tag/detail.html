@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Tag Detail {% endblock %}
+
+{% block content %}
+<div>
+    <a href="{% url 'recipes:tag_list' %}">back to tags list</a>
+</div>
+  <div class="rec_list">
+    <h1>{{ object.title }}</h1>
+    <a class="btn" href="{% url 'recipes:tag_update' object.id %}" style="color: #000000">Edit</a>
+    <a class="btn" href="{% url 'recipes:tag_delete' object.id %}" style="color: red">Delete</a>
+    </div>
+
+
+{% endblock %}
